@@ -6,10 +6,18 @@ Two major changes were made to make the scripts compatible with the e1039 DST fi
 - E906 had SRawEvent and SRecEvent objects in the DST file. But SQEvent and SRecEvent for e1039. Created the SRawEvent objects using SQEvent and SQHitVector objects available in e1039 DST file
 - E906 used old `VertexFit` algorithm to perform the vertexing of the tracks. But e1039 data is reconstructed using new `SQVeretexing` algorithm. A custom version (outside the Fun4All framework) was created to introduce the new vertxign to this project.
 
-##Usage
+## Usage
 
-Two main soruce codes related to,
-- mixing is `AnaSortMixVertex.cc` is in `/src`.
-- modified SQVertexing is in `SQVertexing_v2.cc`.
+Soruce codes related to mixing in `/src` are,
+- mixing : `AnaSortMixVertex.cc`
+- modified SQVertexing : `SQVertexing_v2.cc`
 
-All other files in `/src` except the base and tree data structure files, performs various analysis tasks as explained in (https://github.com/abinashpun/seaquest-projects/blob/main/e906-root-ana/src/AnaSortMixVertex.cc).
+All other files in `/src` except the ones related to base and tree data structure modules, performs various analysis tasks as explained here (https://github.com/abinashpun/seaquest-projects/blob/main/e906-root-ana/src/AnaSortMixVertex.cc). You may modify the soruce codes to implement your own analysis. Do `make-this` whenever a file in `/src` is modified. Do `cmake-this` and `make-thi` whenever a file is added or removed from `/src`.
+
+To run the mixing in GPVM,
+- `source setup.sh`
+- cd to `work_gpvm`
+- list all runs and spills in `list_run_spill.txt`.
+- execute `./exec-step1.sh`
+All outputs will be saved in a newly made `scratch` directory.
+
