@@ -7,6 +7,7 @@ Two major changes were made to make the scripts compatible with the e1039 DST fi
 - E906 used old `VertexFit` algorithm to perform the vertexing of the tracks. But e1039 data is reconstructed using new `SQVeretexing` algorithm. A custom version (outside the Fun4All framework) was created to introduce the new vertxign to this project.
 
 ##Usage
+
 Two main soruce codes related to,
 - mixing is `AnaSortMixVertex.cc` is in `/src`.
 - modified SQVertexing is in `SQVertexing_v2.cc`.
