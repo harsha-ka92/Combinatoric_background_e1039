@@ -21,3 +21,5 @@ To run the mixing in GPVM,
 - execute `./exec-step1.sh`
 All outputs will be saved in a newly made `scratch` directory.
 
+## Contact
+Harsha Kaluarachchi <harsha92@nmsu.edu>
